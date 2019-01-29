@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lna ./ -lna ../ -lna
+ls -lna ./ ../ boot
