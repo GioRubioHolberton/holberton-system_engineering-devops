@@ -2,5 +2,5 @@
 # Bash script that displays the content of the current
 for DIRE in *
 do
-  echo $DIRE | cut -d- -f2
+	echo "$DIRE" | cut -d- -f2
 done
