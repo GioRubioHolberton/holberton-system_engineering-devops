@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Bash script that displays the content of the current directory
+DIR=$(ls)
+for DIR in *
+do
+	echo $DIR | cut -d- -f2
+done
