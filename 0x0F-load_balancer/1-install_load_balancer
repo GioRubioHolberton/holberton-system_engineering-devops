@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#Install nginx web server
+sudo apt-get -y install software-properties-common
+sudo add-apt-repository ppa:vbernat/haproxy-1.8
+sudo apt-get update
+sudo apt-get -y install haproxy=1.8.\*
+
+frontend http-frontend
+    bind *:80
+    default_backend wwwbackend
+
+backend wwwbackend
+    balance roundrobin
+    server 759-web-01 34.73.205.221 check
+    server 759-web-02 35.231.84.120 check
+
+
+sudo service haproxy restart
+    
