@@ -11,5 +11,5 @@ sudo sed -i "39i $error" /etc/nginx/sites-enabled/default
 
 
 mycustom_header="\\\tadd_header X-Served-By \$HOSTNAME;\n"
-sudo sed -i "41i $custom_header" /etc/nginx/nginx.conf
+sudo sed -i "41i $mycustom_header" /etc/nginx/nginx.conf
 sudo service nginx restart
