@@ -11,8 +11,8 @@ frontend http-frontend
 
 backend wwwbackend
     balance roundrobin
-    server 759-web-01 34.73.205.221 check
-    server 759-web-02 35.231.84.120 check
+    server web-01 34.73.205.221 check
+    server web-02 35.231.84.120 check
 
 
 sudo service haproxy restart
