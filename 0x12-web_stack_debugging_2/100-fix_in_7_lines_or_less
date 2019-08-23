@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# cript that configures the container to fit the above requirements
+# 7 lines or less 
 pkill apache2
 sudo chown nginx:nginx /etc/nginx/nginx.conf
 sudo chmod 600 /etc/nginx/nginx.conf
