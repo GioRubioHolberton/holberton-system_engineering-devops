@@ -2,6 +2,7 @@
 """0. Gather data from an API"""
 
 import json
+import csv
 import requests
 from sys import argv
 
@@ -10,7 +11,7 @@ if __name__ == '__main__':
     """Gather data"""
     get_user = requests.get("https://jsonplaceholder.typicode.com/users/{}".
                             format(argv[1]))
-    user_name = get_user.json().get('name')
+    user_name = get_user.json()
 
     get_todo = requests.get('https://jsonplaceholder.typicode.com/todos',
                             params={'userId': argv[1]})
@@ -20,7 +21,7 @@ if __name__ == '__main__':
     for mv in users_todo:
         list_task.append({'task': mv.get('title'),
                           'completed': mv.get('completed'),
-                          'username': user_name})
+                          'username': user_name.get('username')})
 
     dic_json = {argv[1]: users_todo}
 
