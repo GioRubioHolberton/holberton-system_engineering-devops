@@ -19,7 +19,8 @@ if __name__ == '__main__':
     list_task = []
     for mv in users_todo:
         list_task.append({'task': mv.get('title'),
-                        'completed': mv.get('completed') ,'username': user_name})
+                          'completed': mv.get('completed'),
+                          'username': user_name})
 
     dic_json = {argv[1]: users_todo}
 
