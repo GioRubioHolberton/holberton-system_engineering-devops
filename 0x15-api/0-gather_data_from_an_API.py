@@ -27,4 +27,4 @@ if __name__ == '__main__':
                                                     count_done,
                                                     all_tasks))
     for it in done_tasks:
-        print("     {}".format(it))
+        print("\t {}".format(it))
