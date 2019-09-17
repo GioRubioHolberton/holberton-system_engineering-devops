@@ -24,6 +24,5 @@ if __name__ == '__main__':
 
     dic_json = {argv[1]: users_todo}
 
-    with open('{}.json'.format(argv[1]), 'w', encoding="UTF-8") as jsonfile:
-        exp_json = json.dumps(dic_json)
-        jsonfile.write(exp_json)
+    with open('{}.json'.format(argv[1]), 'w') as jsonfile:
+        json.dump({argv[1]: list_task}, jsonfile)
