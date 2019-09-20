@@ -13,7 +13,7 @@ def number_of_subscribers(subreddit):
     if requ.status_code == 301:
         return (0)
 
-    list = req.json().get('data', {}).get('subscribers')
+    list = requ.json().get('data', {}).get('subscribers')
     if list is not None:
         return (list)
     else:
