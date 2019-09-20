@@ -5,7 +5,7 @@ import requests
 
 def top_ten(subreddit):
     """Get num subs"""
-    url_end = get("https://www.reddit.com/r/{}/hot.json".format(subreddit)
+    url_end = ("https://www.reddit.com/r/{}/hot.json".format(subreddit)
 
     my_headers = {'User-Agent': 'Gon'}
     requ = requests.get(url_end, headers=my_headers)
