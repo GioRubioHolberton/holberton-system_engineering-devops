@@ -14,4 +14,7 @@ def number_of_subscribers(subreddit):
         return (0)
 
     list = requ.json().get('data')
-    return (list)
+    if list is not None:
+        return (list)
+    else:
+        return 0
